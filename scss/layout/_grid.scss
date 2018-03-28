@@ -1,12 +1,10 @@
 .row{
 	max-width: $grid-width;
-	background: #eee;
 	margin: 0 auto;
 	
 	@include clearfix;
 	
 	[class^="col-"]{
-		background: tomato;
 		float: left;
 		&:not(:last-child){
 			margin-right: $gutter-horizontal;
