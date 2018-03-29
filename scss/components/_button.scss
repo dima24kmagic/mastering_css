@@ -31,6 +31,13 @@
 			background-color: $color-white;
 		}
 	}
+	&--green{
+		background: $color-primary-light;
+		color: rgba($color-white, .9);
+		&::after{
+			background-color: $color-primary-light;
+		}
+	}
 	&::after{
 		transition: all .4s;
 		content: "";
