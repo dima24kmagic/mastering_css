@@ -12,6 +12,28 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>  
+       
+       <div class="navigation">
+       	<input id="navi-toggle" type="checkbox" class="navigation__checkbox">
+       	
+       	<label for="navi-toggle" class="navigation__button">
+			<span class="navigation__icon"></span>
+      	</label>
+       	
+       	<div class="navigation__bg">&nbsp;</div>
+       	
+       	<nav class="navigation__nav">
+       		
+       		<ul class="navigation__list">
+       			<li class="navigation__item"><a href="" class="navigation__link">Scriptonit</a></li>
+       			<li class="navigation__item"><a href="" class="navigation__link">Chainz</a></li>
+       			<li class="navigation__item"><a href="" class="navigation__link">Web development</a></li>
+       			<li class="navigation__item"><a href="" class="navigation__link">Muhfucka</a></li>
+       			<li class="navigation__item"><a href="" class="navigation__link">Drake</a></li>
+       		</ul>
+       	</nav>
+       </div>
+       
         <header class="header">
         	<div class="header__logo-box">
         		<img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -198,7 +220,6 @@
         	    </div>
         	</section>
         	
-        	
         	<section class="section-stories">
         		<div class="bg-video">
         			<video class="bg-video__content" autoplay loop muted>
@@ -243,7 +264,70 @@
         	    
         	    <div class="u-center-text"><a href="" class="btn-text">Read all stories &rarr;</a></div>
         	</section>
+        	
+        	<section class="section-book">
+        		<div class="row">
+        			<div class="book">
+        				<div class="book__form">
+        					<form action="#" class="form">
+        						<div class="form__group">
+        							<div class="u-mb-4">
+        								<h1 class="heading-secondary">Start Booking Now!</h1>
+        							</div>
+        							<input type="text" id="name" class="form__input" placeholder="Full Name" required>
+        							<label for="name" class="form__label">Full name</label>
+        						</div>
+        						<div class="form__group">
+        							<input type="email" id="email" class="form__input" placeholder="Email adress" required>
+        							<label for="email" class="form__label">Email adress</label>
+        						</div>
+        						<div class="form__group u-mb-4">
+        							<div class="form__radio-group">
+        								<input type="radio" class="form__radio-input" id="small" name="size">
+        								<label for="small" class="form__radio-label">
+        									<span class="form__radio-button"></span>
+        								Small tour group
+        								</label>
+        							</div>
+        							<div class="form__radio-group">
+        								<input type="radio" class="form__radio-input" id="large" name="size">
+        								<label for="large" class="form__radio-label">
+        								<span class="form__radio-button"></span>
+        								Large tour group
+        								</label>
+        							</div>
+        						</div>
+        						<button href="" class="btn btn--green">next stepp &rarr;</button>
+        					</form>
+        				</div>
+        			</div>
+        		</div>
+        	</section>
         </main>
+        
+        <footer class="footer">
+        	<div class="footer__logo-box u-mb-8">
+        		<img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo">
+        	</div>
+        	<div class="row">
+        		<div class="col-1-of-2">
+        			<div class="footer__navigation">
+        				<ul class="footer__list">
+        					<li class="footer__item"><a href="" class="footer__link">Company</a></li>
+        					<li class="footer__item"><a href="" class="footer__link">Contacts</a></li>
+        					<li class="footer__item"><a href="" class="footer__link">Careesrs</a></li>
+        					<li class="footer__item"><a href="" class="footer__link">Privacy</a></li>
+        					<li class="footer__item"><a href="" class="footer__link">Terms</a></li>
+        				</ul>
+        			</div>
+        		</div>
+        		<div class="col-1-of-2">
+        			<p class="footer__copyright">
+        				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eos, iusto aliquam, sed ipsa adipisci <a href="" class="footer__link">delectus nobis</a>  maxime obcaecati culpa excepturi nostrum consequuntur quidem, voluptatum saepe suscipit ipsam expedita beatae? <br> Copyright &copy; by Dima Baranov. 
+        			</p>
+        		</div>
+        	</div>
+        </footer>
     </body>
     
 <!--

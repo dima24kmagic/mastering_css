@@ -1,0 +1,54 @@
+.footer{
+	background: #404040;
+	padding: 10rem 0;
+	border-top-style: 1.4rem;
+	color: rgba($white, .6);
+	&__logo-box{
+		text-align: center;
+	}
+	
+	&__logo{
+		width: 15rem;
+		height: auto;
+	}
+	
+	&__navigation{
+		padding-top: 2rem;
+		display: inline-block;
+		margin: 0 auto;
+		border-top: 2px solid rgba($white, .8);
+	}
+	
+	&__list{
+		list-style: none;
+	}
+	
+	&__item{
+		display: inline-block;
+		&:not(:last-child){
+			margin-right: 1rem;
+		}
+	}
+	
+	&__link{
+		&:link,
+		&:visited{
+			transition: all .25s;
+			text-decoration: none;
+			color: rgba($white, .8);
+			text-transform: uppercase;
+		}
+		&:hover,
+		&:active{
+			text-shadow: 0 .5rem 1rem $shadow4;
+			color: $white;
+		}
+	}
+	
+	&__copyright{
+		padding-top: 2rem;
+		display: inline-block;
+		margin: 0 auto;
+		border-top: 2px solid rgba($white, .8);
+	}
+}
