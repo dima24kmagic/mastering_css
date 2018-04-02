@@ -9,8 +9,16 @@
 	font-size: $default-font-size;
 	transform: skewX(-12deg);
 	background: rgba($white, .6);
+	
+	@include respond(phone){
+		transform: skewX(0deg);
+		padding: 5rem 2rem;
+	}
 	& > * {
 		transform: skewX(12deg);
+		@include respond(phone){
+			transform: skewX(0deg);
+		}
 	}
 	&__shape{
 		backface-visibility: hidden;
@@ -24,7 +32,10 @@
 		-webkit-clip-path: circle(50% at 50% 50%);
 		clip-path: circle(50% at 50% 50%);
 //		border-radius: 100%;
-		transform: translateX(-3rem) skewX(12deg);;
+		transform: translateX(-3rem) skewX(12deg);
+		@include respond(phone){
+			transform: skewX(0deg);
+		}
 	}
 	&__img{
 		transition: .5s;

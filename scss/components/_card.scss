@@ -1,10 +1,34 @@
+
 .card{
+	
+	@include respond (tab-port){
+		width: 80%;
+		margin: 0 auto;
+		height: 58rem;
+		margin-bottom: 35rem;
+	}
+	@include respond (phone){
+		margin: 0 auto;
+		height: 58rem;
+		width: 100%;
+		min-width: 32rem;
+		margin: 0 auto;
+		margin-bottom: 35rem;
+	}
     position: relative;
     perspective: 150rem;
     -moz-perspective: 150rem;
     backface-visibility: hidden;
     height: 51rem;
     &__side{
+		@include respond (tab-port){
+			width: 100%;
+			height: 52rem;
+			box-shadow: 0;
+		}
+		@include respond (phone){
+			height: 52rem;
+		}
 //        overflow: hidden;
         border-radius: 4px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -19,12 +43,40 @@
         font-size: 2rem;
         backface-visibility: hidden;
 		height: 51rem;
+		backface-visibility: hidden;
         &--front{
 			backface-visibility: hidden;
 			z-index: 2;
             background: $color-white; 
+			@include respond (tab-port){
+				clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5rem), 0 100%);
+				box-shadow: none;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			@include respond (tab-port){
+				clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), 0 100%);
+			}
         }
         &--back{
+			@include respond (tab-port){
+				margin-top: -10rem;
+				border-radius: 0;
+				position: absolute;
+				top: 100%;
+				height: 35rem;
+				z-index: 1;
+				transform: rotateY(0);
+			}
+			@include respond (phone){
+				margin-top: -12rem;
+				border-radius: 0;
+				position: absolute;
+				top: 100%;
+				height: 35rem;
+				z-index: 1;
+				transform: rotateY(0);
+			}
 			backface-visibility: hidden;
 			z-index: 1;
             transform: rotateY(180deg);
@@ -121,6 +173,9 @@
 		text-align: center;
 		margin-bottom: 8rem;
 		color: $color-white; 
+		@include respond (tab-port){
+			margin-bottom: 2rem;
+		}
 	}
 	&__price-only{
 			font-size: 1.4rem;
@@ -131,4 +186,5 @@
 		font-weight: 100;
 		margin: 0;
 	}
+	
 }

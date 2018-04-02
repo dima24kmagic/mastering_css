@@ -6,13 +6,13 @@
 	&__button{
 		
 		@include respond (tab-port){
-			top: 3rem;
-			right: 3rem;
+			top: 2.5rem;
+			right: 2.5rem;
 		}
 		
 		@include respond (phone){
-			top: 2rem;
-			right: 2rem;
+			top: 1.5rem;
+			right: 1.5rem;
 		}
 		
 		background: $white;
