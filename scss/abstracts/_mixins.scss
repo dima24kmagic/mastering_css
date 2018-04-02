@@ -5,3 +5,36 @@
 		clear: both;
 	}
 }
+
+//MEDIA QUERY MANAGER
+
+/*
+0-600px:		PHINE
+600-900px:		TABLET
+900-1202px:		Tablet landscape
+[1200-1800]: 	Normal wtyles
+1800px+ : 		Big Desktop
+*/
+
+/* breakpoint choises
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+ORDER: Base + typography > General layout + grid> page layout > components
+*/
+@mixin respond($breakpoint){
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {@content}
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) {@content}
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {@content}
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {@content}
+	}
+}

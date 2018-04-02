@@ -3,6 +3,11 @@
 	padding: 10rem 0;
 	border-top-style: 1.4rem;
 	color: rgba($white, .6);
+	
+	@include respond (tab-port){
+		padding: 8rem 0;
+	}
+	
 	&__logo-box{
 		text-align: center;
 	}
@@ -13,6 +18,10 @@
 	}
 	
 	&__navigation{
+		@include respond (tab-port){
+			text-align: center;
+			width: 100%;
+		}
 		padding-top: 2rem;
 		display: inline-block;
 		margin: 0 auto;
@@ -50,5 +59,12 @@
 		display: inline-block;
 		margin: 0 auto;
 		border-top: 2px solid rgba($white, .8);
+		
+		@include respond (tab-port){
+			text-align: center;
+			width: 100%;
+			float: none;
+			padding: 2rem 4rem;
+		}
 	}
 }
