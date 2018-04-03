@@ -1,0 +1,80 @@
+.popup{
+	transition: all .5s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 2001;
+	background: rgba($color-black, .8);
+	
+	visibility: hidden;
+	opacity: 0;
+	
+	&:target{
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+	&:target &__content{
+		transform: translate(-50%, -50%) scale(1);
+	}
+	
+	&__content{
+		transition: all .5s;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(.5);
+		width: 75%;
+		background: $white;
+		border-radius: 4px;
+		box-shadow: 0 2rem 4rem $shadow4;
+		display: table;
+		overflow: hidden;
+	}
+	
+	&__left{
+		margin: 0;
+		width: 33.333%;
+		display: table-cell;
+	}
+	&__right{
+		position: relative;
+		padding: 0 5rem;
+		vertical-align: middle;
+		display: table-cell;
+		width: 66.6667%;
+	}
+	&__img{
+		display: block;
+		width: 100%;
+		object-fit: cover;
+	}
+	&__text{
+		font-size: 1.4rem;
+		
+		column-count: 2;
+		column-gap: 4rem;
+		column-rule: 1px solid #eee;
+		
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+	}
+	
+	&__close{
+		transition: color .15s;
+		position: absolute;
+		top: 2rem;
+		right: 4rem;
+		transform: scale(3);
+		text-decoration: none;
+		color: #999;
+		&:hover{
+			color: #404040;
+		}
+	}
+}

@@ -1,0 +1,190 @@
+
+.card{
+	
+	@include respond (tab-port){
+		width: 80%;
+		margin: 0 auto;
+		height: 58rem;
+		margin-bottom: 35rem;
+	}
+	@include respond (phone){
+		margin: 0 auto;
+		height: 58rem;
+		width: 100%;
+		min-width: 32rem;
+		margin: 0 auto;
+		margin-bottom: 35rem;
+	}
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    backface-visibility: hidden;
+    height: 51rem;
+    &__side{
+		@include respond (tab-port){
+			width: 100%;
+			height: 52rem;
+			box-shadow: 0;
+		}
+		@include respond (phone){
+			height: 52rem;
+		}
+//        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: tomato;
+        height: 50rem;
+        transition: all 1s ease;
+        color: $white;
+        font-size: 2rem;
+        backface-visibility: hidden;
+		height: 51rem;
+		backface-visibility: hidden;
+        &--front{
+			backface-visibility: hidden;
+			z-index: 2;
+            background: $color-white; 
+			@include respond (tab-port){
+				clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5rem), 0 100%);
+				box-shadow: none;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			@include respond (tab-port){
+				clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), 0 100%);
+			}
+        }
+        &--back{
+			@include respond (tab-port){
+				margin-top: -10rem;
+				border-radius: 0;
+				position: absolute;
+				top: 100%;
+				height: 35rem;
+				z-index: 1;
+				transform: rotateY(0);
+			}
+			@include respond (phone){
+				margin-top: -12rem;
+				border-radius: 0;
+				position: absolute;
+				top: 100%;
+				height: 35rem;
+				z-index: 1;
+				transform: rotateY(0);
+			}
+			backface-visibility: hidden;
+			z-index: 1;
+            transform: rotateY(180deg);
+            &-1{
+                background: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark); 
+            }
+			&-2{
+				background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+			}
+			&-3{
+				background: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+			}
+        }
+    }
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+	
+	// FRON SIDE STYLE
+    &__picture{
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url('/img/nat-5.jpg');
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url('/img/nat-6.jpg');
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url('/img/nat-7.jpg');
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        text-transform: uppercase;
+        &-span{
+            padding: 1rem 1.5rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            margin: 0;
+            background: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8));
+			&-2{
+				background: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
+			}
+			&-3{
+				background: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8));
+			}
+        }
+    }
+	&__details{
+		padding: 3rem;
+		color: $color-grey-dark;
+		ul{
+			margin: 0 auto;
+			list-style: none;
+			width: 80%;
+			li{
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+				&:not(:last-child){
+					border-bottom: 1px solid #eee;
+				}
+			}
+		}
+	}
+	
+	// BACK SIDE STYLE
+	&__cta{
+		text-align: center;
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	&__price-box{
+		text-align: center;
+		margin-bottom: 8rem;
+		color: $color-white; 
+		@include respond (tab-port){
+			margin-bottom: 2rem;
+		}
+	}
+	&__price-only{
+			font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+	&__price-value{
+		font-size: 6rem;
+		font-weight: 100;
+		margin: 0;
+	}
+	
+}
