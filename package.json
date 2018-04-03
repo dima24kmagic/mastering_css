@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"deploy": "gh-pages -d ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dima24kmagic/mastering_css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dima24kmagic/mastering_css/issues"
+  },
+  "homepage": "https://github.com/dima24kmagic/mastering_css#readme",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}
